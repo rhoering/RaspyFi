@@ -234,7 +234,7 @@ function parseResponse(inputArr,respType,i,inpath) {
 
 function getDB(cmd, path, browsemode, uplevel){
 	if (cmd == 'filepath') {
-		$.post('db/?cmd=filepath', { 'path': path }, function(data) {
+		$.post('/db/?cmd=filepath', { 'path': path }, function(data) {
 			populateDB(data, path, uplevel);
 		}, 'json');
 	} else if (cmd == 'add') {
